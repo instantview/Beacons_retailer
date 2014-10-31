@@ -1,0 +1,667 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3ED4566EBEA44ADD95C54FD1 /* libPods-RetailerBeacons.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B8B4AC3AB64949F8822B082D /* libPods-RetailerBeacons.a */; };
+		AD0A893019ACE09300FE5072 /* LGAllBeaconsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AD0A892F19ACE09300FE5072 /* LGAllBeaconsTableViewController.m */; };
+		AD0A893819ACECD900FE5072 /* LGOfferViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AD0A893619ACECD900FE5072 /* LGOfferViewController.m */; };
+		AD0A893919ACECD900FE5072 /* Offer.xib in Resources */ = {isa = PBXBuildFile; fileRef = AD0A893719ACECD900FE5072 /* Offer.xib */; };
+		CE00C00F19A6373800E83234 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE00C00E19A6373800E83234 /* Foundation.framework */; };
+		CE00C01119A6373800E83234 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE00C01019A6373800E83234 /* CoreGraphics.framework */; };
+		CE00C01319A6373800E83234 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE00C01219A6373800E83234 /* UIKit.framework */; };
+		CE00C01919A6373800E83234 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = CE00C01719A6373800E83234 /* InfoPlist.strings */; };
+		CE00C01B19A6373800E83234 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CE00C01A19A6373800E83234 /* main.m */; };
+		CE00C01F19A6373800E83234 /* LGAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CE00C01E19A6373800E83234 /* LGAppDelegate.m */; };
+		CE00C02819A6373800E83234 /* LGViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE00C02719A6373800E83234 /* LGViewController.m */; };
+		CE00C02A19A6373800E83234 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE00C02919A6373800E83234 /* Images.xcassets */; };
+		CE00C03119A6373800E83234 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE00C03019A6373800E83234 /* XCTest.framework */; };
+		CE00C03219A6373800E83234 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE00C00E19A6373800E83234 /* Foundation.framework */; };
+		CE00C03319A6373800E83234 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE00C01219A6373800E83234 /* UIKit.framework */; };
+		CE00C03B19A6373800E83234 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = CE00C03919A6373800E83234 /* InfoPlist.strings */; };
+		CE00C03D19A6373800E83234 /* RetailerBeaconsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CE00C03C19A6373800E83234 /* RetailerBeaconsTests.m */; };
+		CECE645319A754F300F7F22A /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CECE645219A754F300F7F22A /* CoreLocation.framework */; };
+		CECE645519A76C5200F7F22A /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CECE645419A76C5200F7F22A /* CoreBluetooth.framework */; };
+		CECE645B19A7828700F7F22A /* LGMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CECE645A19A7828700F7F22A /* LGMenuViewController.m */; };
+		CECE646619A791A200F7F22A /* success.png in Resources */ = {isa = PBXBuildFile; fileRef = CECE646519A791A200F7F22A /* success.png */; };
+		CECE646B19A7979600F7F22A /* DetectedBeacon.xib in Resources */ = {isa = PBXBuildFile; fileRef = CECE646819A7979600F7F22A /* DetectedBeacon.xib */; };
+		CECE646C19A7979600F7F22A /* LGDetectedBeaconViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CECE646A19A7979600F7F22A /* LGDetectedBeaconViewController.m */; };
+		CECE646F19AF385600F7F22A /* samsungtv.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CECE646E19AF385600F7F22A /* samsungtv.jpg */; };
+		CECE647519B4B4AB00F7F22A /* LGLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CECE647319B4B4AB00F7F22A /* LGLoginViewController.m */; };
+		CECE647A19B4C2D100F7F22A /* Login.xib in Resources */ = {isa = PBXBuildFile; fileRef = CECE647919B4C2D100F7F22A /* Login.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		CE00C03419A6373800E83234 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CE00C00319A6373800E83234 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CE00C00A19A6373800E83234;
+			remoteInfo = RetailerBeacons;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		34DDDB9DEFBB43BD908AA016 /* Pods-RetailerBeacons.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RetailerBeacons.xcconfig"; path = "Pods/Pods-RetailerBeacons.xcconfig"; sourceTree = "<group>"; };
+		AD0A892E19ACE09300FE5072 /* LGAllBeaconsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LGAllBeaconsTableViewController.h; path = RetailerBeacons/iPad/AllBeacons/LGAllBeaconsTableViewController.h; sourceTree = "<group>"; };
+		AD0A892F19ACE09300FE5072 /* LGAllBeaconsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LGAllBeaconsTableViewController.m; path = RetailerBeacons/iPad/AllBeacons/LGAllBeaconsTableViewController.m; sourceTree = "<group>"; };
+		AD0A893519ACECD900FE5072 /* LGOfferViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LGOfferViewController.h; path = RetailerBeacons/iPad/Offer/LGOfferViewController.h; sourceTree = "<group>"; };
+		AD0A893619ACECD900FE5072 /* LGOfferViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LGOfferViewController.m; path = RetailerBeacons/iPad/Offer/LGOfferViewController.m; sourceTree = "<group>"; };
+		AD0A893719ACECD900FE5072 /* Offer.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = Offer.xib; path = RetailerBeacons/iPad/Offer/Offer.xib; sourceTree = "<group>"; };
+		B8B4AC3AB64949F8822B082D /* libPods-RetailerBeacons.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-RetailerBeacons.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CE00C00B19A6373800E83234 /* RetailerBeacons.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RetailerBeacons.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CE00C00E19A6373800E83234 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		CE00C01019A6373800E83234 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		CE00C01219A6373800E83234 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		CE00C01619A6373800E83234 /* RetailerBeacons-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "RetailerBeacons-Info.plist"; path = "Application/RetailerBeacons-Info.plist"; sourceTree = "<group>"; };
+		CE00C01819A6373800E83234 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		CE00C01A19A6373800E83234 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = main.m; path = Application/main.m; sourceTree = "<group>"; };
+		CE00C01C19A6373800E83234 /* RetailerBeacons-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "RetailerBeacons-Prefix.pch"; path = "Application/RetailerBeacons-Prefix.pch"; sourceTree = "<group>"; };
+		CE00C01D19A6373800E83234 /* LGAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = LGAppDelegate.h; path = Application/LGAppDelegate.h; sourceTree = "<group>"; };
+		CE00C01E19A6373800E83234 /* LGAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = LGAppDelegate.m; path = Application/LGAppDelegate.m; sourceTree = "<group>"; };
+		CE00C02619A6373800E83234 /* LGViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = LGViewController.h; path = RetailerBeacons/iPad/LGViewController.h; sourceTree = "<group>"; };
+		CE00C02719A6373800E83234 /* LGViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = LGViewController.m; path = RetailerBeacons/iPad/LGViewController.m; sourceTree = "<group>"; };
+		CE00C02919A6373800E83234 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = Application/Images.xcassets; sourceTree = "<group>"; };
+		CE00C02F19A6373800E83234 /* RetailerBeaconsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RetailerBeaconsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CE00C03019A6373800E83234 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		CE00C03819A6373800E83234 /* RetailerBeaconsTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "RetailerBeaconsTests-Info.plist"; sourceTree = "<group>"; };
+		CE00C03A19A6373800E83234 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		CE00C03C19A6373800E83234 /* RetailerBeaconsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RetailerBeaconsTests.m; sourceTree = "<group>"; };
+		CECE645219A754F300F7F22A /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		CECE645419A76C5200F7F22A /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
+		CECE645919A7828700F7F22A /* LGMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LGMenuViewController.h; path = RetailerBeacons/iPad/Menu/LGMenuViewController.h; sourceTree = "<group>"; };
+		CECE645A19A7828700F7F22A /* LGMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LGMenuViewController.m; path = RetailerBeacons/iPad/Menu/LGMenuViewController.m; sourceTree = "<group>"; };
+		CECE646519A791A200F7F22A /* success.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = success.png; sourceTree = "<group>"; };
+		CECE646819A7979600F7F22A /* DetectedBeacon.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DetectedBeacon.xib; sourceTree = "<group>"; };
+		CECE646919A7979600F7F22A /* LGDetectedBeaconViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LGDetectedBeaconViewController.h; sourceTree = "<group>"; };
+		CECE646A19A7979600F7F22A /* LGDetectedBeaconViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LGDetectedBeaconViewController.m; sourceTree = "<group>"; };
+		CECE646E19AF385600F7F22A /* samsungtv.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = samsungtv.jpg; path = Resources/Temp/samsungtv.jpg; sourceTree = SOURCE_ROOT; };
+		CECE647219B4B4AB00F7F22A /* LGLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LGLoginViewController.h; path = RetailerBeacons/iPad/Login/LGLoginViewController.h; sourceTree = "<group>"; };
+		CECE647319B4B4AB00F7F22A /* LGLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LGLoginViewController.m; path = RetailerBeacons/iPad/Login/LGLoginViewController.m; sourceTree = "<group>"; };
+		CECE647919B4C2D100F7F22A /* Login.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = Login.xib; path = RetailerBeacons/iPad/Login/Login.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		CE00C00819A6373800E83234 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CECE645519A76C5200F7F22A /* CoreBluetooth.framework in Frameworks */,
+				CECE645319A754F300F7F22A /* CoreLocation.framework in Frameworks */,
+				CE00C01119A6373800E83234 /* CoreGraphics.framework in Frameworks */,
+				CE00C01319A6373800E83234 /* UIKit.framework in Frameworks */,
+				CE00C00F19A6373800E83234 /* Foundation.framework in Frameworks */,
+				3ED4566EBEA44ADD95C54FD1 /* libPods-RetailerBeacons.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CE00C02C19A6373800E83234 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CE00C03119A6373800E83234 /* XCTest.framework in Frameworks */,
+				CE00C03319A6373800E83234 /* UIKit.framework in Frameworks */,
+				CE00C03219A6373800E83234 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		AD0A892D19ACD80E00FE5072 /* AllBeacons */ = {
+			isa = PBXGroup;
+			children = (
+				AD0A892E19ACE09300FE5072 /* LGAllBeaconsTableViewController.h */,
+				AD0A892F19ACE09300FE5072 /* LGAllBeaconsTableViewController.m */,
+			);
+			name = AllBeacons;
+			sourceTree = "<group>";
+		};
+		AD0A893119ACEBF500FE5072 /* Offer */ = {
+			isa = PBXGroup;
+			children = (
+				AD0A893519ACECD900FE5072 /* LGOfferViewController.h */,
+				AD0A893619ACECD900FE5072 /* LGOfferViewController.m */,
+				AD0A893719ACECD900FE5072 /* Offer.xib */,
+			);
+			name = Offer;
+			sourceTree = "<group>";
+		};
+		CE00C00219A6373800E83234 = {
+			isa = PBXGroup;
+			children = (
+				CE00C01419A6373800E83234 /* RetailerBeacons */,
+				CE00C03619A6373800E83234 /* RetailerBeaconsTests */,
+				CE00C00D19A6373800E83234 /* Frameworks */,
+				CE00C00C19A6373800E83234 /* Products */,
+				CE25846C19A7438000A2DF37 /* Resources */,
+				34DDDB9DEFBB43BD908AA016 /* Pods-RetailerBeacons.xcconfig */,
+			);
+			sourceTree = "<group>";
+		};
+		CE00C00C19A6373800E83234 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CE00C00B19A6373800E83234 /* RetailerBeacons.app */,
+				CE00C02F19A6373800E83234 /* RetailerBeaconsTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CE00C00D19A6373800E83234 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CECE645419A76C5200F7F22A /* CoreBluetooth.framework */,
+				CECE645219A754F300F7F22A /* CoreLocation.framework */,
+				CE00C00E19A6373800E83234 /* Foundation.framework */,
+				CE00C01019A6373800E83234 /* CoreGraphics.framework */,
+				CE00C01219A6373800E83234 /* UIKit.framework */,
+				CE00C03019A6373800E83234 /* XCTest.framework */,
+				B8B4AC3AB64949F8822B082D /* libPods-RetailerBeacons.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CE00C01419A6373800E83234 /* RetailerBeacons */ = {
+			isa = PBXGroup;
+			children = (
+				CE25846F19A7448A00A2DF37 /* Application */,
+				CE25846E19A7446400A2DF37 /* iPad */,
+				CE25846D19A7444900A2DF37 /* iPhone */,
+			);
+			path = RetailerBeacons;
+			sourceTree = "<group>";
+		};
+		CE00C03619A6373800E83234 /* RetailerBeaconsTests */ = {
+			isa = PBXGroup;
+			children = (
+				CE00C03C19A6373800E83234 /* RetailerBeaconsTests.m */,
+				CE00C03719A6373800E83234 /* Supporting Files */,
+			);
+			path = RetailerBeaconsTests;
+			sourceTree = "<group>";
+		};
+		CE00C03719A6373800E83234 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				CE00C03819A6373800E83234 /* RetailerBeaconsTests-Info.plist */,
+				CE00C03919A6373800E83234 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		CE25846C19A7438000A2DF37 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				CECE646319A791A200F7F22A /* Images */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		CE25846D19A7444900A2DF37 /* iPhone */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = iPhone;
+			path = ..;
+			sourceTree = "<group>";
+		};
+		CE25846E19A7446400A2DF37 /* iPad */ = {
+			isa = PBXGroup;
+			children = (
+				CECE647019B4B3CC00F7F22A /* Login */,
+				AD0A893119ACEBF500FE5072 /* Offer */,
+				AD0A892D19ACD80E00FE5072 /* AllBeacons */,
+				CECE646719A7979600F7F22A /* DetectedBeacon */,
+				CECE645619A781DA00F7F22A /* Menu */,
+				CE00C02619A6373800E83234 /* LGViewController.h */,
+				CE00C02719A6373800E83234 /* LGViewController.m */,
+			);
+			name = iPad;
+			path = ..;
+			sourceTree = "<group>";
+		};
+		CE25846F19A7448A00A2DF37 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				CE00C01D19A6373800E83234 /* LGAppDelegate.h */,
+				CE00C01E19A6373800E83234 /* LGAppDelegate.m */,
+				CE00C02919A6373800E83234 /* Images.xcassets */,
+				CE00C01619A6373800E83234 /* RetailerBeacons-Info.plist */,
+				CE00C01719A6373800E83234 /* InfoPlist.strings */,
+				CE00C01A19A6373800E83234 /* main.m */,
+				CE00C01C19A6373800E83234 /* RetailerBeacons-Prefix.pch */,
+			);
+			name = Application;
+			sourceTree = "<group>";
+		};
+		CECE645619A781DA00F7F22A /* Menu */ = {
+			isa = PBXGroup;
+			children = (
+				CECE645919A7828700F7F22A /* LGMenuViewController.h */,
+				CECE645A19A7828700F7F22A /* LGMenuViewController.m */,
+			);
+			name = Menu;
+			sourceTree = "<group>";
+		};
+		CECE646319A791A200F7F22A /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				CECE646D19AF377200F7F22A /* Temp */,
+				CECE646419A791A200F7F22A /* Icons */,
+			);
+			name = Images;
+			path = Resources/Images;
+			sourceTree = "<group>";
+		};
+		CECE646419A791A200F7F22A /* Icons */ = {
+			isa = PBXGroup;
+			children = (
+				CECE646519A791A200F7F22A /* success.png */,
+			);
+			path = Icons;
+			sourceTree = "<group>";
+		};
+		CECE646719A7979600F7F22A /* DetectedBeacon */ = {
+			isa = PBXGroup;
+			children = (
+				CECE646819A7979600F7F22A /* DetectedBeacon.xib */,
+				CECE646919A7979600F7F22A /* LGDetectedBeaconViewController.h */,
+				CECE646A19A7979600F7F22A /* LGDetectedBeaconViewController.m */,
+			);
+			name = DetectedBeacon;
+			path = RetailerBeacons/iPad/DetectedBeacon;
+			sourceTree = "<group>";
+		};
+		CECE646D19AF377200F7F22A /* Temp */ = {
+			isa = PBXGroup;
+			children = (
+				CECE646E19AF385600F7F22A /* samsungtv.jpg */,
+			);
+			name = Temp;
+			sourceTree = "<group>";
+		};
+		CECE647019B4B3CC00F7F22A /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				CECE647219B4B4AB00F7F22A /* LGLoginViewController.h */,
+				CECE647319B4B4AB00F7F22A /* LGLoginViewController.m */,
+				CECE647919B4C2D100F7F22A /* Login.xib */,
+			);
+			name = Login;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		CE00C00A19A6373800E83234 /* RetailerBeacons */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CE00C04019A6373800E83234 /* Build configuration list for PBXNativeTarget "RetailerBeacons" */;
+			buildPhases = (
+				588552852F254E4490A7B844 /* Check Pods Manifest.lock */,
+				CE00C00719A6373800E83234 /* Sources */,
+				CE00C00819A6373800E83234 /* Frameworks */,
+				CE00C00919A6373800E83234 /* Resources */,
+				D5059406252A48619D3845B0 /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = RetailerBeacons;
+			productName = RetailerBeacons;
+			productReference = CE00C00B19A6373800E83234 /* RetailerBeacons.app */;
+			productType = "com.apple.product-type.application";
+		};
+		CE00C02E19A6373800E83234 /* RetailerBeaconsTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CE00C04319A6373800E83234 /* Build configuration list for PBXNativeTarget "RetailerBeaconsTests" */;
+			buildPhases = (
+				CE00C02B19A6373800E83234 /* Sources */,
+				CE00C02C19A6373800E83234 /* Frameworks */,
+				CE00C02D19A6373800E83234 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CE00C03519A6373800E83234 /* PBXTargetDependency */,
+			);
+			name = RetailerBeaconsTests;
+			productName = RetailerBeaconsTests;
+			productReference = CE00C02F19A6373800E83234 /* RetailerBeaconsTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		CE00C00319A6373800E83234 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = LG;
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = "Legendary Games";
+				TargetAttributes = {
+					CE00C00A19A6373800E83234 = {
+						DevelopmentTeam = F3X4PXV7XS;
+					};
+					CE00C02E19A6373800E83234 = {
+						TestTargetID = CE00C00A19A6373800E83234;
+					};
+				};
+			};
+			buildConfigurationList = CE00C00619A6373800E83234 /* Build configuration list for PBXProject "RetailerBeacons" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CE00C00219A6373800E83234;
+			productRefGroup = CE00C00C19A6373800E83234 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				CE00C00A19A6373800E83234 /* RetailerBeacons */,
+				CE00C02E19A6373800E83234 /* RetailerBeaconsTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		CE00C00919A6373800E83234 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CECE647A19B4C2D100F7F22A /* Login.xib in Resources */,
+				CECE646F19AF385600F7F22A /* samsungtv.jpg in Resources */,
+				AD0A893919ACECD900FE5072 /* Offer.xib in Resources */,
+				CE00C02A19A6373800E83234 /* Images.xcassets in Resources */,
+				CECE646B19A7979600F7F22A /* DetectedBeacon.xib in Resources */,
+				CE00C01919A6373800E83234 /* InfoPlist.strings in Resources */,
+				CECE646619A791A200F7F22A /* success.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CE00C02D19A6373800E83234 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CE00C03B19A6373800E83234 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		588552852F254E4490A7B844 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		D5059406252A48619D3845B0 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-RetailerBeacons-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		CE00C00719A6373800E83234 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AD0A893019ACE09300FE5072 /* LGAllBeaconsTableViewController.m in Sources */,
+				CECE645B19A7828700F7F22A /* LGMenuViewController.m in Sources */,
+				AD0A893819ACECD900FE5072 /* LGOfferViewController.m in Sources */,
+				CE00C01B19A6373800E83234 /* main.m in Sources */,
+				CECE646C19A7979600F7F22A /* LGDetectedBeaconViewController.m in Sources */,
+				CECE647519B4B4AB00F7F22A /* LGLoginViewController.m in Sources */,
+				CE00C01F19A6373800E83234 /* LGAppDelegate.m in Sources */,
+				CE00C02819A6373800E83234 /* LGViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CE00C02B19A6373800E83234 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CE00C03D19A6373800E83234 /* RetailerBeaconsTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		CE00C03519A6373800E83234 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CE00C00A19A6373800E83234 /* RetailerBeacons */;
+			targetProxy = CE00C03419A6373800E83234 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		CE00C01719A6373800E83234 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CE00C01819A6373800E83234 /* en */,
+			);
+			name = InfoPlist.strings;
+			path = Application;
+			sourceTree = "<group>";
+		};
+		CE00C03919A6373800E83234 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CE00C03A19A6373800E83234 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		CE00C03E19A6373800E83234 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		CE00C03F19A6373800E83234 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		CE00C04119A6373800E83234 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 34DDDB9DEFBB43BD908AA016 /* Pods-RetailerBeacons.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "RetailerBeacons/Application/RetailerBeacons-Prefix.pch";
+				INFOPLIST_FILE = "RetailerBeacons/Application/RetailerBeacons-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		CE00C04219A6373800E83234 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 34DDDB9DEFBB43BD908AA016 /* Pods-RetailerBeacons.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "RetailerBeacons/Application/RetailerBeacons-Prefix.pch";
+				INFOPLIST_FILE = "RetailerBeacons/Application/RetailerBeacons-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		CE00C04419A6373800E83234 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/RetailerBeacons.app/RetailerBeacons";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "RetailerBeacons/RetailerBeacons-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "RetailerBeaconsTests/RetailerBeaconsTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		CE00C04519A6373800E83234 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/RetailerBeacons.app/RetailerBeacons";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "RetailerBeacons/RetailerBeacons-Prefix.pch";
+				INFOPLIST_FILE = "RetailerBeaconsTests/RetailerBeaconsTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		CE00C00619A6373800E83234 /* Build configuration list for PBXProject "RetailerBeacons" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CE00C03E19A6373800E83234 /* Debug */,
+				CE00C03F19A6373800E83234 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CE00C04019A6373800E83234 /* Build configuration list for PBXNativeTarget "RetailerBeacons" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CE00C04119A6373800E83234 /* Debug */,
+				CE00C04219A6373800E83234 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CE00C04319A6373800E83234 /* Build configuration list for PBXNativeTarget "RetailerBeaconsTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CE00C04419A6373800E83234 /* Debug */,
+				CE00C04519A6373800E83234 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = CE00C00319A6373800E83234 /* Project object */;
+}
