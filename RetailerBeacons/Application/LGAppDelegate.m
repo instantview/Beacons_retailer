@@ -9,7 +9,7 @@
 #import "LGAppDelegate.h"
 #import "LGViewController.h"
 #import "LGDetectedBeaconViewController.h"
-#import "LGAllBeaconsTableViewController.h"
+#import "LGAllBeaconsViewController.h"
 #import "LGLoginViewController.h"
 
 @implementation LGAppDelegate
@@ -18,8 +18,11 @@
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     self.window.backgroundColor = [UIColor whiteColor];
-    
-    // Quick check if we know this user already
+	
+	if ([application respondsToSelector:@selector(registerUserNotificationSettings:)]) {
+		[application registerUserNotificationSettings:[UIUserNotificationSettings settingsForTypes:UIUserNotificationTypeAlert|UIUserNotificationTypeBadge|UIUserNotificationTypeSound categories:nil]];
+	}
+	
     if ([self isLoggedIn] == NO)
     {
         LGLoginViewController *loginVC = [[LGLoginViewController alloc] initWithNibName:@"Login" bundle:nil];
@@ -27,9 +30,14 @@
     }
     else
     {
-        LGAllBeaconsTableViewController *allBeacons = [[LGAllBeaconsTableViewController alloc] initWithStyle:UITableViewStylePlain];
+        LGAllBeaconsViewController *allBeacons = [LGAllBeaconsViewController new];
         UINavigationController *navigation = [[UINavigationController alloc] initWithRootViewController:allBeacons];
-        navigation.navigationBar.backgroundColor = [UIColor yellowColor];
+        navigation.navigationBar.backgroundColor = [UIColor blackColor];
+		navigation.navigationBar.tintColor = [UIColor yellowColor];
+		navigation.navigationBar.barTintColor = [UIColor blackColor];
+		navigation.navigationBar.barStyle = UIBarStyleBlackOpaque;
+		navigation.navigationBar.opaque = YES;
+		
         self.window.rootViewController = navigation;
     }
     
@@ -49,6 +57,7 @@
         
         if (guid)
         {
+			NSLog(@"%@", guid);
             return YES;
         }
     }

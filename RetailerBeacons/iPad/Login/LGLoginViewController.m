@@ -8,7 +8,11 @@
 
 #import "MBProgressHUD/MBProgressHUD.h"
 #import "LGLoginViewController.h"
-#import "LGAllBeaconsTableViewController.h"
+#import "LGAllBeaconsViewController.h"
+#import "LGRegisterViewController.h"
+#import "UIColor+UIColorCategory.h"
+#import "AFNetworking.h"
+#import "Constants.h"
 
 @interface LGLoginViewController () <UITextFieldDelegate, MBProgressHUDDelegate> {
     MBProgressHUD *HUD;
@@ -22,6 +26,7 @@
 @synthesize inputPassword;
 @synthesize containerView;
 @synthesize message;
+@synthesize buttonLogin;
 
 NSString *const kDefaultEmailInput = @"Email";
 NSString *const kDefaultPasswordInput = @"Password";
@@ -30,8 +35,7 @@ NSString *const kDefaultPasswordInput = @"Password";
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     
-    if (self)
-    {
+    if (self){
         [self setup];
     }
     
@@ -45,39 +49,48 @@ NSString *const kDefaultPasswordInput = @"Password";
 
 - (void)setup
 {
-    self.view.backgroundColor = [UIColor colorWithRed:(247/255.0)
-                                                green:(247/255.0)
-                                                 blue:(247/255.0)
-                                                alpha:1];
+	self.view.backgroundColor = [UIColor colorWithHexString:@"0x222222"];
     self.inputEmail.delegate = self;
     self.inputPassword.delegate = self;
+	
+	self.containerView.layer.borderWidth = 1.0f;
+	self.containerView.layer.borderColor = [UIColor colorWithHexString:@"0xEEEEEE"].CGColor;
+	
+	self.buttonLogin.backgroundColor = [UIColor yellowColor];
+	self.buttonLogin.layer.cornerRadius = 5.0f;
+	self.buttonLogin.tintColor = [UIColor brownColor];
 }
 
 # pragma mark - Complete the login
 - (IBAction)login:(id)sender
 {
-    if ([self.inputEmail.text isEqualToString:kDefaultEmailInput] || [self.inputEmail.text isEqualToString:@""])
-    {
+	HUD = [[MBProgressHUD alloc] initWithView:self.view];
+	[self.view addSubview:HUD];
+	
+	HUD.mode = MBProgressHUDModeIndeterminate;
+	HUD.labelText = @"Logging in...";
+	HUD.delegate = self;
+	
+	[HUD show:YES];
+	
+    if ([self.inputEmail.text isEqualToString:kDefaultEmailInput] || [self.inputEmail.text isEqualToString:@""]){
         [self setErrorMessageText:@"Please enter your email address"];
         return;
     }
     
-    if (![self validEmail:self.inputEmail.text])
-    {
+    if (![self validEmail:self.inputEmail.text]){
         [self setErrorMessageText:@"Please enter a valid email address"];
         return;
     }
     
-    if ([self.inputPassword.text isEqualToString:kDefaultPasswordInput] || [self.inputPassword.text isEqualToString:@""])
-    {
+    if ([self.inputPassword.text isEqualToString:kDefaultPasswordInput] || [self.inputPassword.text isEqualToString:@""]){
         [self setErrorMessageText:@"Please enter your password"];
         return;
     }
     
     [self showLoginActivity];
     
-    if (![self validLogin])
-    {
+    if (![self validLogin]){
         [self hideLoginActivity];
         [self setErrorMessageText:@"Incorrect login. Please try again."];
         
@@ -85,13 +98,68 @@ NSString *const kDefaultPasswordInput = @"Password";
     }
     else
     {
-        LGAllBeaconsTableViewController *allBeacons = [[LGAllBeaconsTableViewController alloc] initWithStyle:UITableViewStylePlain];
-        UINavigationController *navigation = [[UINavigationController alloc] initWithRootViewController:allBeacons];
-        navigation.navigationBar.backgroundColor = [UIColor yellowColor];
-        
-        self.view.window.rootViewController = navigation;
+		NSLog(@"%@", kBaseAPIUrl);
+		
+		NSString *url = [NSString stringWithFormat:@"%@/user/UserLogin", kBaseAPIUrl];
+		
+		AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
+		manager.responseSerializer = [AFJSONResponseSerializer serializer];
+		
+		NSDictionary *params = @{@"email" : self.inputEmail.text, @"password" : self.inputPassword.text};
+		
+		[manager POST:url
+		   parameters:params
+			  success:^(AFHTTPRequestOperation *operation, id responseObject){
+				  
+				  if ([responseObject objectForKey:@"guid"]){
+					  
+					  NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+					  [defaults setValue:responseObject[@"guid"] forKey:@"guid"];
+					  
+					  // When the login has been successful
+					  LGAllBeaconsViewController *allBeacons = [LGAllBeaconsViewController new];
+					  UINavigationController *navigation = [[UINavigationController alloc] initWithRootViewController:allBeacons];
+					  navigation.navigationBar.backgroundColor = [UIColor blackColor];
+					  navigation.navigationBar.tintColor = [UIColor yellowColor];
+					  navigation.navigationBar.barTintColor = [UIColor blackColor];
+					  navigation.navigationBar.barStyle = UIBarStyleBlackOpaque;
+					  navigation.navigationBar.opaque = YES;
+					  
+					  self.view.window.rootViewController = navigation;
+					  
+				  } else {
+					  
+					  NSLog(@"Couldn't log you in %@", responseObject[@"message"]);
+					  
+					  HUD.mode = MBProgressHUDModeText;
+					  HUD.labelText =  [NSString stringWithFormat:@"Incorrect Login"];
+					  HUD.detailsLabelText = @"Please try again.";
+					  
+					  [HUD hide:YES afterDelay:2];
+					  
+				  }
+				  
+			  } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+				  
+				  HUD.mode = MBProgressHUDModeText;
+				  HUD.labelText =  [NSString stringWithFormat:@"Server error"];
+				  HUD.detailsLabelText = @"Please try again.";
+				  
+				  [HUD hide:YES afterDelay:2];
+				
+				  NSLog(@"Failure: %@", error);
+			  }];
     }
     
+}
+
+- (IBAction)createAccount:(id)sender
+{
+	NSLog(@"Create account...");
+	
+	LGRegisterViewController *createAccount = [LGRegisterViewController new];
+	
+	[self presentViewController:createAccount animated:NO completion:nil];
 }
 
 - (void)setErrorMessageText:(NSString *)messageText
@@ -102,14 +170,17 @@ NSString *const kDefaultPasswordInput = @"Password";
 
 - (BOOL)validEmail:(NSString*) emailString
 {
-    if([emailString length]==0)
-    {
+    if([emailString length]==0){
         return NO;
     }
     
     NSString *regExPattern = @"[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,4}";
-    NSRegularExpression *regEx = [[NSRegularExpression alloc] initWithPattern:regExPattern options:NSRegularExpressionCaseInsensitive error:nil];
-    NSUInteger regExMatches = [regEx numberOfMatchesInString:emailString options:0 range:NSMakeRange(0, [emailString length])];
+    NSRegularExpression *regEx = [[NSRegularExpression alloc] initWithPattern:regExPattern
+																	  options:NSRegularExpressionCaseInsensitive
+																		error:nil];
+    NSUInteger regExMatches = [regEx numberOfMatchesInString:emailString
+													 options:0
+													   range:NSMakeRange(0, [emailString length])];
     
     if (regExMatches == 0) {
         return NO;
@@ -126,10 +197,7 @@ NSString *const kDefaultPasswordInput = @"Password";
 - (void)showLoginActivity
 {
     [self.view endEditing:YES];
-    
-    // Update the view to reflect the login process happening
-    self.containerView.hidden = YES;
-    
+	
     HUD = [[MBProgressHUD alloc] initWithView:self.view];
 	[self.view addSubview:HUD];
 	
@@ -148,32 +216,37 @@ NSString *const kDefaultPasswordInput = @"Password";
 
 - (void)textFieldDidBeginEditing:(UITextField *)textField
 {
-    if ([textField.text isEqualToString:kDefaultEmailInput] || [textField.text isEqualToString:kDefaultPasswordInput])
-    {
+    if ([textField.text isEqualToString:kDefaultEmailInput] || [textField.text isEqualToString:kDefaultPasswordInput]){
         textField.text = @"";
+		textField.keyboardType = UIKeyboardTypeEmailAddress;
     }
     
-    if (textField.tag == 2)
-    {
+    if (textField.tag == 2){
         textField.secureTextEntry = YES;
+		textField.keyboardType = UIKeyboardTypeDefault;
     }
 }
 
 - (void)textFieldDidEndEditing:(UITextField *)textField
 {
-    if ([textField.text isEqualToString:@""])
-    {
-        if (textField.tag == 1)
-        {
+    if ([textField.text isEqualToString:@""]){
+		
+        if (textField.tag == 1){
             textField.text = kDefaultEmailInput;
         }
         
-        if (textField.tag == 2)
-        {
+        if (textField.tag == 2){
             textField.secureTextEntry = NO;
             textField.text = kDefaultPasswordInput;
         }
+		
     }
+}
+
+- (BOOL)isModal {
+	return self.presentingViewController.presentedViewController == self
+	|| self.navigationController.presentingViewController.presentedViewController == self.navigationController
+	|| [self.tabBarController.presentingViewController isKindOfClass:[UITabBarController class]];
 }
 
 - (BOOL)prefersStatusBarHidden

@@ -6,23 +6,43 @@
 	<dict>
 		<key>Pods-RetailerBeacons-AFNetworking.xcscheme</key>
 		<dict>
-			<key>orderHint</key>
-			<integer>2</integer>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-RetailerBeacons-MBProgressHUD.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-RetailerBeacons-Reachability.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
 		</dict>
 		<key>Pods-RetailerBeacons.xcscheme</key>
 		<dict>
-			<key>orderHint</key>
-			<integer>1</integer>
+			<key>isShown</key>
+			<false/>
 		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>006A69DD742A4AC890501D52</key>
+		<key>0C546FDE619288EC69D63F08</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>44D60399A81645E79558A67B</key>
+		<key>113E366848AEE5630289C924</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>8C7ABF6D06423522E638455B</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>D2C89463E9F44B5B34283BD5</key>
 		<dict>
 			<key>primary</key>
 			<true/>

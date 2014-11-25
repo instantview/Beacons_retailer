@@ -14,7 +14,9 @@
 @property (weak, nonatomic) IBOutlet UIView *containerView;
 @property (weak, nonatomic) IBOutlet UITextField *inputEmail;
 @property (weak, nonatomic) IBOutlet UITextField *inputPassword;
+@property (strong, nonatomic) IBOutlet UIButton *buttonLogin;
 
 - (IBAction)login:(id)sender;
+- (IBAction)createAccount:(id)sender;
 
 @end

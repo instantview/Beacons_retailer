@@ -7,10 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3ED4566EBEA44ADD95C54FD1 /* libPods-RetailerBeacons.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B8B4AC3AB64949F8822B082D /* libPods-RetailerBeacons.a */; };
-		AD0A893019ACE09300FE5072 /* LGAllBeaconsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AD0A892F19ACE09300FE5072 /* LGAllBeaconsTableViewController.m */; };
-		AD0A893819ACECD900FE5072 /* LGOfferViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AD0A893619ACECD900FE5072 /* LGOfferViewController.m */; };
-		AD0A893919ACECD900FE5072 /* Offer.xib in Resources */ = {isa = PBXBuildFile; fileRef = AD0A893719ACECD900FE5072 /* Offer.xib */; };
+		88DA5DD9E2DF926346A836AE /* libPods-RetailerBeacons.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B8B4AC3AB64949F8822B082D /* libPods-RetailerBeacons.a */; };
+		AD37326219DEA9A600E61B6F /* LGAllBeaconsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AD37326119DEA9A600E61B6F /* LGAllBeaconsViewController.m */; };
+		AD37326819DEEA3C00E61B6F /* LGBeaconCellLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = AD37326719DEEA3C00E61B6F /* LGBeaconCellLayout.m */; };
+		AD7B4DC119E55FD600FF784F /* LGProductViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AD7B4DBF19E55FD600FF784F /* LGProductViewController.m */; };
+		AD7B4DC219E55FD600FF784F /* Product.xib in Resources */ = {isa = PBXBuildFile; fileRef = AD7B4DC019E55FD600FF784F /* Product.xib */; };
+		AD7B4DCC19E572EA00FF784F /* analytics@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AD7B4DCB19E572EA00FF784F /* analytics@2x.png */; };
+		ADA1B1CF19D4CBA8008CF35E /* UIColor+UIColorCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = ADA1B1CE19D4CBA8008CF35E /* UIColor+UIColorCategory.m */; };
+		ADA1B1D119D4E30B008CF35E /* shop.png in Resources */ = {isa = PBXBuildFile; fileRef = ADA1B1D019D4E30B008CF35E /* shop.png */; };
+		ADA1B1DB19D4F47D008CF35E /* LGRegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ADA1B1DA19D4F47D008CF35E /* LGRegisterViewController.m */; };
+		ADA1B1ED19D574B5008CF35E /* Constants.m in Sources */ = {isa = PBXBuildFile; fileRef = ADA1B1EC19D574B5008CF35E /* Constants.m */; };
+		ADEB156519E2A8F90001216D /* noimage@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = ADEB156419E2A8F90001216D /* noimage@2x.png */; };
+		ADEB156819E2ACA30001216D /* LGBeaconCell.m in Sources */ = {isa = PBXBuildFile; fileRef = ADEB156719E2ACA30001216D /* LGBeaconCell.m */; };
+		ADEB156A19E2E0E10001216D /* newbeacon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = ADEB156919E2E0E10001216D /* newbeacon@2x.png */; };
+		ADEBB9DE19F6B4BC003F66A6 /* LGBeaconConfigurationView.m in Sources */ = {isa = PBXBuildFile; fileRef = ADEBB9DD19F6B4BC003F66A6 /* LGBeaconConfigurationView.m */; };
+		ADEBB9E019F80B32003F66A6 /* close@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = ADEBB9DF19F80B32003F66A6 /* close@2x.png */; };
 		CE00C00F19A6373800E83234 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE00C00E19A6373800E83234 /* Foundation.framework */; };
 		CE00C01119A6373800E83234 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE00C01019A6373800E83234 /* CoreGraphics.framework */; };
 		CE00C01319A6373800E83234 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE00C01219A6373800E83234 /* UIKit.framework */; };
@@ -46,12 +57,30 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		34DDDB9DEFBB43BD908AA016 /* Pods-RetailerBeacons.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RetailerBeacons.xcconfig"; path = "Pods/Pods-RetailerBeacons.xcconfig"; sourceTree = "<group>"; };
-		AD0A892E19ACE09300FE5072 /* LGAllBeaconsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LGAllBeaconsTableViewController.h; path = RetailerBeacons/iPad/AllBeacons/LGAllBeaconsTableViewController.h; sourceTree = "<group>"; };
-		AD0A892F19ACE09300FE5072 /* LGAllBeaconsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LGAllBeaconsTableViewController.m; path = RetailerBeacons/iPad/AllBeacons/LGAllBeaconsTableViewController.m; sourceTree = "<group>"; };
-		AD0A893519ACECD900FE5072 /* LGOfferViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LGOfferViewController.h; path = RetailerBeacons/iPad/Offer/LGOfferViewController.h; sourceTree = "<group>"; };
-		AD0A893619ACECD900FE5072 /* LGOfferViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LGOfferViewController.m; path = RetailerBeacons/iPad/Offer/LGOfferViewController.m; sourceTree = "<group>"; };
-		AD0A893719ACECD900FE5072 /* Offer.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = Offer.xib; path = RetailerBeacons/iPad/Offer/Offer.xib; sourceTree = "<group>"; };
+		15F00266711F60E8FEEA3318 /* Pods-RetailerBeacons.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RetailerBeacons.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RetailerBeacons/Pods-RetailerBeacons.debug.xcconfig"; sourceTree = "<group>"; };
+		7BCAEAE40C01DDB1E49B4EA1 /* Pods-RetailerBeacons.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RetailerBeacons.release.xcconfig"; path = "Pods/Target Support Files/Pods-RetailerBeacons/Pods-RetailerBeacons.release.xcconfig"; sourceTree = "<group>"; };
+		AD37326019DEA9A600E61B6F /* LGAllBeaconsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LGAllBeaconsViewController.h; path = RetailerBeacons/iPad/AllBeacons/LGAllBeaconsViewController.h; sourceTree = "<group>"; };
+		AD37326119DEA9A600E61B6F /* LGAllBeaconsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LGAllBeaconsViewController.m; path = RetailerBeacons/iPad/AllBeacons/LGAllBeaconsViewController.m; sourceTree = "<group>"; };
+		AD37326619DEEA3C00E61B6F /* LGBeaconCellLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LGBeaconCellLayout.h; path = RetailerBeacons/iPad/AllBeacons/LGBeaconCellLayout.h; sourceTree = "<group>"; };
+		AD37326719DEEA3C00E61B6F /* LGBeaconCellLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LGBeaconCellLayout.m; path = RetailerBeacons/iPad/AllBeacons/LGBeaconCellLayout.m; sourceTree = "<group>"; };
+		AD7B4DBE19E55FD600FF784F /* LGProductViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LGProductViewController.h; sourceTree = "<group>"; };
+		AD7B4DBF19E55FD600FF784F /* LGProductViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LGProductViewController.m; sourceTree = "<group>"; };
+		AD7B4DC019E55FD600FF784F /* Product.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Product.xib; sourceTree = "<group>"; };
+		AD7B4DCB19E572EA00FF784F /* analytics@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "analytics@2x.png"; sourceTree = "<group>"; };
+		ADA1B1CD19D4CBA8008CF35E /* UIColor+UIColorCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+UIColorCategory.h"; sourceTree = "<group>"; };
+		ADA1B1CE19D4CBA8008CF35E /* UIColor+UIColorCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+UIColorCategory.m"; sourceTree = "<group>"; };
+		ADA1B1D019D4E30B008CF35E /* shop.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = shop.png; sourceTree = "<group>"; };
+		ADA1B1D919D4F47D008CF35E /* LGRegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LGRegisterViewController.h; path = RetailerBeacons/iPad/Register/LGRegisterViewController.h; sourceTree = "<group>"; };
+		ADA1B1DA19D4F47D008CF35E /* LGRegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LGRegisterViewController.m; path = RetailerBeacons/iPad/Register/LGRegisterViewController.m; sourceTree = "<group>"; };
+		ADA1B1EB19D574B5008CF35E /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
+		ADA1B1EC19D574B5008CF35E /* Constants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Constants.m; sourceTree = "<group>"; };
+		ADEB156419E2A8F90001216D /* noimage@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "noimage@2x.png"; sourceTree = "<group>"; };
+		ADEB156619E2ACA30001216D /* LGBeaconCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LGBeaconCell.h; path = RetailerBeacons/iPad/AllBeacons/LGBeaconCell.h; sourceTree = "<group>"; };
+		ADEB156719E2ACA30001216D /* LGBeaconCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LGBeaconCell.m; path = RetailerBeacons/iPad/AllBeacons/LGBeaconCell.m; sourceTree = "<group>"; };
+		ADEB156919E2E0E10001216D /* newbeacon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "newbeacon@2x.png"; sourceTree = "<group>"; };
+		ADEBB9DC19F6B4BC003F66A6 /* LGBeaconConfigurationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LGBeaconConfigurationView.h; path = RetailerBeacons/LGBeaconConfigurationView.h; sourceTree = "<group>"; };
+		ADEBB9DD19F6B4BC003F66A6 /* LGBeaconConfigurationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LGBeaconConfigurationView.m; path = RetailerBeacons/LGBeaconConfigurationView.m; sourceTree = "<group>"; };
+		ADEBB9DF19F80B32003F66A6 /* close@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "close@2x.png"; sourceTree = "<group>"; };
 		B8B4AC3AB64949F8822B082D /* libPods-RetailerBeacons.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-RetailerBeacons.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE00C00B19A6373800E83234 /* RetailerBeacons.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RetailerBeacons.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE00C00E19A6373800E83234 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -95,7 +124,7 @@
 				CE00C01119A6373800E83234 /* CoreGraphics.framework in Frameworks */,
 				CE00C01319A6373800E83234 /* UIKit.framework in Frameworks */,
 				CE00C00F19A6373800E83234 /* Foundation.framework in Frameworks */,
-				3ED4566EBEA44ADD95C54FD1 /* libPods-RetailerBeacons.a in Frameworks */,
+				88DA5DD9E2DF926346A836AE /* libPods-RetailerBeacons.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -112,23 +141,75 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		AD0A892D19ACD80E00FE5072 /* AllBeacons */ = {
+		44C0AF0CBF37590FDC3BE646 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				AD0A892E19ACE09300FE5072 /* LGAllBeaconsTableViewController.h */,
-				AD0A892F19ACE09300FE5072 /* LGAllBeaconsTableViewController.m */,
+				15F00266711F60E8FEEA3318 /* Pods-RetailerBeacons.debug.xcconfig */,
+				7BCAEAE40C01DDB1E49B4EA1 /* Pods-RetailerBeacons.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		AD37325F19DEA91900E61B6F /* AllBeacons */ = {
+			isa = PBXGroup;
+			children = (
+				AD37326019DEA9A600E61B6F /* LGAllBeaconsViewController.h */,
+				AD37326119DEA9A600E61B6F /* LGAllBeaconsViewController.m */,
+				AD37326619DEEA3C00E61B6F /* LGBeaconCellLayout.h */,
+				AD37326719DEEA3C00E61B6F /* LGBeaconCellLayout.m */,
+				ADEB156619E2ACA30001216D /* LGBeaconCell.h */,
+				ADEB156719E2ACA30001216D /* LGBeaconCell.m */,
+				ADEBB9DC19F6B4BC003F66A6 /* LGBeaconConfigurationView.h */,
+				ADEBB9DD19F6B4BC003F66A6 /* LGBeaconConfigurationView.m */,
 			);
 			name = AllBeacons;
 			sourceTree = "<group>";
 		};
-		AD0A893119ACEBF500FE5072 /* Offer */ = {
+		AD7B4DBD19E55FD600FF784F /* Product */ = {
 			isa = PBXGroup;
 			children = (
-				AD0A893519ACECD900FE5072 /* LGOfferViewController.h */,
-				AD0A893619ACECD900FE5072 /* LGOfferViewController.m */,
-				AD0A893719ACECD900FE5072 /* Offer.xib */,
+				AD7B4DBE19E55FD600FF784F /* LGProductViewController.h */,
+				AD7B4DBF19E55FD600FF784F /* LGProductViewController.m */,
+				AD7B4DC019E55FD600FF784F /* Product.xib */,
 			);
-			name = Offer;
+			name = Product;
+			path = RetailerBeacons/iPad/Product;
+			sourceTree = "<group>";
+		};
+		ADA1B1CB19D4CBA8008CF35E /* Library */ = {
+			isa = PBXGroup;
+			children = (
+				ADA1B1EA19D574B5008CF35E /* Constants */,
+				ADA1B1CC19D4CBA8008CF35E /* Categories */,
+			);
+			path = Library;
+			sourceTree = "<group>";
+		};
+		ADA1B1CC19D4CBA8008CF35E /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				ADA1B1CD19D4CBA8008CF35E /* UIColor+UIColorCategory.h */,
+				ADA1B1CE19D4CBA8008CF35E /* UIColor+UIColorCategory.m */,
+			);
+			path = Categories;
+			sourceTree = "<group>";
+		};
+		ADA1B1D819D4F448008CF35E /* Register */ = {
+			isa = PBXGroup;
+			children = (
+				ADA1B1D919D4F47D008CF35E /* LGRegisterViewController.h */,
+				ADA1B1DA19D4F47D008CF35E /* LGRegisterViewController.m */,
+			);
+			name = Register;
+			sourceTree = "<group>";
+		};
+		ADA1B1EA19D574B5008CF35E /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				ADA1B1EB19D574B5008CF35E /* Constants.h */,
+				ADA1B1EC19D574B5008CF35E /* Constants.m */,
+			);
+			path = Constants;
 			sourceTree = "<group>";
 		};
 		CE00C00219A6373800E83234 = {
@@ -139,7 +220,7 @@
 				CE00C00D19A6373800E83234 /* Frameworks */,
 				CE00C00C19A6373800E83234 /* Products */,
 				CE25846C19A7438000A2DF37 /* Resources */,
-				34DDDB9DEFBB43BD908AA016 /* Pods-RetailerBeacons.xcconfig */,
+				44C0AF0CBF37590FDC3BE646 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -169,6 +250,7 @@
 		CE00C01419A6373800E83234 /* RetailerBeacons */ = {
 			isa = PBXGroup;
 			children = (
+				ADA1B1CB19D4CBA8008CF35E /* Library */,
 				CE25846F19A7448A00A2DF37 /* Application */,
 				CE25846E19A7446400A2DF37 /* iPad */,
 				CE25846D19A7444900A2DF37 /* iPhone */,
@@ -213,9 +295,10 @@
 		CE25846E19A7446400A2DF37 /* iPad */ = {
 			isa = PBXGroup;
 			children = (
+				AD7B4DBD19E55FD600FF784F /* Product */,
+				AD37325F19DEA91900E61B6F /* AllBeacons */,
+				ADA1B1D819D4F448008CF35E /* Register */,
 				CECE647019B4B3CC00F7F22A /* Login */,
-				AD0A893119ACEBF500FE5072 /* Offer */,
-				AD0A892D19ACD80E00FE5072 /* AllBeacons */,
 				CECE646719A7979600F7F22A /* DetectedBeacon */,
 				CECE645619A781DA00F7F22A /* Menu */,
 				CE00C02619A6373800E83234 /* LGViewController.h */,
@@ -261,6 +344,11 @@
 		CECE646419A791A200F7F22A /* Icons */ = {
 			isa = PBXGroup;
 			children = (
+				ADEB156919E2E0E10001216D /* newbeacon@2x.png */,
+				AD7B4DCB19E572EA00FF784F /* analytics@2x.png */,
+				ADEBB9DF19F80B32003F66A6 /* close@2x.png */,
+				ADEB156419E2A8F90001216D /* noimage@2x.png */,
+				ADA1B1D019D4E30B008CF35E /* shop.png */,
 				CECE646519A791A200F7F22A /* success.png */,
 			);
 			path = Icons;
@@ -378,10 +466,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				CECE647A19B4C2D100F7F22A /* Login.xib in Resources */,
+				ADEB156519E2A8F90001216D /* noimage@2x.png in Resources */,
 				CECE646F19AF385600F7F22A /* samsungtv.jpg in Resources */,
-				AD0A893919ACECD900FE5072 /* Offer.xib in Resources */,
+				ADEBB9E019F80B32003F66A6 /* close@2x.png in Resources */,
 				CE00C02A19A6373800E83234 /* Images.xcassets in Resources */,
 				CECE646B19A7979600F7F22A /* DetectedBeacon.xib in Resources */,
+				ADA1B1D119D4E30B008CF35E /* shop.png in Resources */,
+				ADEB156A19E2E0E10001216D /* newbeacon@2x.png in Resources */,
+				AD7B4DCC19E572EA00FF784F /* analytics@2x.png in Resources */,
+				AD7B4DC219E55FD600FF784F /* Product.xib in Resources */,
 				CE00C01919A6373800E83234 /* InfoPlist.strings in Resources */,
 				CECE646619A791A200F7F22A /* success.png in Resources */,
 			);
@@ -425,7 +518,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Pods-RetailerBeacons-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RetailerBeacons/Pods-RetailerBeacons-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -435,14 +528,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AD0A893019ACE09300FE5072 /* LGAllBeaconsTableViewController.m in Sources */,
+				ADEB156819E2ACA30001216D /* LGBeaconCell.m in Sources */,
+				AD37326819DEEA3C00E61B6F /* LGBeaconCellLayout.m in Sources */,
+				ADA1B1ED19D574B5008CF35E /* Constants.m in Sources */,
 				CECE645B19A7828700F7F22A /* LGMenuViewController.m in Sources */,
-				AD0A893819ACECD900FE5072 /* LGOfferViewController.m in Sources */,
 				CE00C01B19A6373800E83234 /* main.m in Sources */,
 				CECE646C19A7979600F7F22A /* LGDetectedBeaconViewController.m in Sources */,
+				ADA1B1DB19D4F47D008CF35E /* LGRegisterViewController.m in Sources */,
 				CECE647519B4B4AB00F7F22A /* LGLoginViewController.m in Sources */,
+				ADEBB9DE19F6B4BC003F66A6 /* LGBeaconConfigurationView.m in Sources */,
 				CE00C01F19A6373800E83234 /* LGAppDelegate.m in Sources */,
 				CE00C02819A6373800E83234 /* LGViewController.m in Sources */,
+				ADA1B1CF19D4CBA8008CF35E /* UIColor+UIColorCategory.m in Sources */,
+				AD7B4DC119E55FD600FF784F /* LGProductViewController.m in Sources */,
+				AD37326219DEA9A600E61B6F /* LGAllBeaconsViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -559,7 +658,7 @@
 		};
 		CE00C04119A6373800E83234 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 34DDDB9DEFBB43BD908AA016 /* Pods-RetailerBeacons.xcconfig */;
+			baseConfigurationReference = 15F00266711F60E8FEEA3318 /* Pods-RetailerBeacons.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -576,7 +675,7 @@
 		};
 		CE00C04219A6373800E83234 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 34DDDB9DEFBB43BD908AA016 /* Pods-RetailerBeacons.xcconfig */;
+			baseConfigurationReference = 7BCAEAE40C01DDB1E49B4EA1 /* Pods-RetailerBeacons.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;

@@ -12,5 +12,9 @@
 
 @property (weak, nonatomic) IBOutlet UITextField *beaconName;
 @property (weak, nonatomic) IBOutlet UIView *detectedView;
+@property (strong, nonatomic) IBOutlet UIButton *buttonTakePhoto;
+
+- (IBAction)buttonTakePhoto:(id)sender;
+- (IBAction)buttonSaveBeacon:(id)sender;
 
 @end
